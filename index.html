@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alvaro Flores · Portafolio</title>
+    <meta name="description" content="Portafolio de proyectos de Alvaro Flores, desarrollador web.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/portfolio.css" />
+    <script src="javascript/portfolio.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="brand">ALVARO<span>.</span>FLORES</div>
+        <nav id="mainNav">
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-list" id="navList">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button id="themeToggle" class="theme-toggle" aria-label="Cambiar tema" title="Cambiar tema claro/oscuro">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="inicio">
+            <div class="hero-text">
+                <p class="eyebrow">Desarrollador web</p>
+                <h1>Hola, soy <span class="accent">Alvaro Flores</span>.<br>Construyo interfaces web claras y funcionales.</h1>
+                <p class="hero-lead">
+                    Estudiante de desarrollo web enfocado en HTML, CSS y JavaScript.
+                    Aquí reúno los proyectos que he construido mientras aprendo a
+                    resolver problemas reales con código.
+                </p>
+                <div class="hero-actions">
+                    <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+                    <a href="#contacto" class="btn btn-ghost">Contactarme</a>
+                </div>
+            </div>
+            <div class="hero-photo">
+                <img src="imagenes/me.png" alt="Foto de perfil de Alvaro Flores" id="profilePhoto">
+            </div>
+        </section>
+
+        <section class="bio" id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <div class="bio-content">
+                <p>
+                    Soy estudiante de Ingeniería en Ciencias de la Computación en UNICAH.
+                    Me interesa el desarrollo front-end: cómo se estructura una página,
+                    cómo se le da estilo y cómo se le da comportamiento con JavaScript.
+                    Este portafolio reúne los proyectos que he ido construyendo en el
+                    proceso de aprender.
+                </p>
+                <ul class="skills">
+                    <li>HTML5 semántico</li>
+                    <li>CSS3 (Flexbox, Grid, responsive)</li>
+                    <li>JavaScript (DOM, eventos, clases)</li>
+                    <li>Git y GitHub</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="proyectos" id="proyectos">
+            <h2>Proyectos</h2>
+
+            <div class="carousel" id="carruselProyectos">
+                <div class="track">
+
+                    <article class="slide">
+                        <div class="image">
+                            <img src="imagenes/proyecto-inversiones-cabrera.jpg" alt="Página de inicio del sitio web de Inversiones Cabrera">
+                        </div>
+                        <div class="card">
+                            <h3>Inversiones Cabrera</h3>
+                            <p>Sitio web corporativo para una bodega y distribuidora mayorista, con presentación de la empresa, misión y secciones de productos, ubicación y contacto. Construido con HTML, CSS y JavaScript.</p>
+                        </div>
+                    </article>
+
+                    <article class="slide">
+                        <div class="image contain">
+                            <img src="imagenes/proyecto-medicontrol.png" alt="Pantalla de inicio de sesión de la app MediControl">
+                        </div>
+                        <div class="card">
+                            <h3>MediControl</h3>
+                            <p>Aplicación móvil para la gestión de un consultorio médico, con inicio de sesión seguro y validación de credenciales para el personal administrativo y clínico.</p>
+                        </div>
+                    </article>
+
+                    <article class="slide">
+                        <div class="image contain">
+                            <img src="imagenes/proyecto-agrosoporte.png" alt="Pantalla de bienvenida de la app AgroSoporte">
+                        </div>
+                        <div class="card">
+                            <h3>AgroSoporte</h3>
+                            <p>Sistema de atención de incidencias agroindustriales para bombas, riego y maquinaria, pensado para que técnicos y clientes reporten y den seguimiento a fallas en el campo.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="contacto" id="contacto">
+            <h2>Contacto</h2>
+            <div class="contacto-content">
+                <div class="contacto-info">
+                    <p>¿Quieres platicar de un proyecto o una oportunidad? Escríbeme.</p>
+                    <ul class="contact-list">
+                        <li>📧 <a href="mailto:alvaro.lflores89@gmail.com">alvaro.lflores89@gmail.com</a></li>
+                        <li>💼 <a href="https://www.linkedin.com/in/alv-flors" target="_blank" rel="noopener">linkedin.com/in/alv-flors</a></li>
+                        <li>💻 <a href="https://github.com/badflok" target="_blank" rel="noopener">github.com/badflok</a></li>
+                    </ul>
+                </div>
+
+                <form id="contactForm" class="contact-form" novalidate>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required minlength="2">
+
+                    <label for="email">Correo</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required minlength="10"></textarea>
+
+                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Alvaro Flores · Hecho con HTML, CSS y JavaScript.</p>
+    </footer>
+
+</body>
+</html>
